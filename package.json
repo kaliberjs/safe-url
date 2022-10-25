@@ -1,0 +1,15 @@
+{
+  "name": "@kaliber/safe-url",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:kaliberjs/safe-url.git",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-esm-transformer": "^1.0.0"
+  }
+}
