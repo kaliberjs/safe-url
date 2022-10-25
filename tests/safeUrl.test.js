@@ -1,5 +1,5 @@
-import { it, expect, describe } from '@jest/globals'
-import { safeUrl } from '../src/safeUrl'
+const { it, expect, describe } = require('@jest/globals')
+const { safeUrl } = require('../index')
 
 describe('safeUrl', () => {
   it('returns a string', () => {

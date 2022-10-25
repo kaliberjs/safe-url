@@ -1,13 +1,10 @@
-const errorMessage = 'The given protocol is not allowed'
-const knownProtocols = ['https:', 'http:']
-
 export function safeUrl(string) {
   const url = new URL(string)
 
   if (url.searchParams) {
     for (const [_, value] of url.searchParams) {
       if (!isSafeUrl(value)) {
-        throw new Error(errorMessage)
+        throw new Error('The given protocol is not allowed')
       }
     }
   }
@@ -16,13 +13,15 @@ export function safeUrl(string) {
     return url.toString()
   }
 
-  throw new Error(errorMessage)
+  throw new Error('The given protocol is not allowed')
 }
 
 function isSafeUrl(string) {
+  const safeProtocols = ['https:', 'http:']
+
   try {
     const url = new URL(string)
-    return knownProtocols.includes(url.protocol)
+    return safeProtocols.includes(url.protocol)
   } catch(e) {
     return true
   }
