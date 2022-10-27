@@ -4,8 +4,8 @@ export function safeUrl(string) {
   const url = new URL(string)
 
   if (safeProtocols.includes(url.protocol)) {
-    return url.toString()
+    return string
   }
 
-  throw new Error('The given protocol is not allowed')
+  throw new Error(`The given protocol is not allowed: '${url.protocol}'`)
 }
