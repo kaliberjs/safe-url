@@ -13,6 +13,10 @@ describe('safeUrl', () => {
     expect(result).toEqual(input)
   })
 
+  it('doesn\'t except url without protocol', () => {
+    expect(() => safeUrl('kaliber.net')).toThrowError()
+  })
+
   describe('returns the input url when used with a safe url', () => {
     it('http', () => {
       const httpSafeUrl = 'http://kaliber.net/?token=kaliber&user=1#hash'
