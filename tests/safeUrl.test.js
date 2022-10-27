@@ -21,9 +21,4 @@ describe('safeUrl', () => {
     const unsafeInput = 'javascript:confirm(document.domain)//'
     expect(() => safeUrl(unsafeInput)).toThrowError()
   })
-
-  it('throws an error if one of the params is a unsafe part', () => {
-    const unsafeInput = 'https://kaliber.net/?returnUrl=javascript:confirm(document.domain)//&token=xyz'
-    expect(() => safeUrl(unsafeInput)).toThrowError()
-  })
 })
