@@ -20,8 +20,8 @@
   ],
   "private": false,
   "license": "MIT",
-  "repository": "git@github.com:kaliberjs/safe-url.git",
-  "dependencies": {
+  "repository": "https://github.com/kaliberjs/safe-url.git",
+  "devDependencies": {
     "jest": "^29.2.2"
   }
 }
