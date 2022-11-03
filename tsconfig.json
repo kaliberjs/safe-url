@@ -21,9 +21,6 @@
     "checkJs": true,
     "noEmit": true,
     "paths": {
-      "/*?universal": [
-        "src/*"
-      ],
       "/*": [
         "src/*"
       ]

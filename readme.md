@@ -2,7 +2,7 @@
 Returns a safe url of the given string
 
 ## Motivation
-Solves potential XSS vulnerabilities when javascript: is used as a protocol.
+Solves potential XSS vulnerabilities when `javascript:` is used as a protocol.
 
 ## Installation
 
