@@ -13,6 +13,7 @@ yarn add @kaliber/safe-url
 ## Usage
 This function should be used when you want to navigate a user to a other url especially when you take the value form the url. A use case would be to check a returnUrl.
 
+### Basic usage
 ```js
 import { safeUrl } from '@kaliber/safe-url'
 
@@ -23,6 +24,14 @@ window.location.href = safeUrl(returnUrl) // returnUrl = 'https://kaliber.net'
 
 // This throws a error
 window.location.href = safeUrl(returnUrl) // returnUrl =  'javascript:confirm(document.domain)'
+```
+
+### allowedHostsList
+```js
+import { safeUrl } from '@kaliber/safe-url'
+
+safeUrl('https://npm.com/', { allowedHostsList: ['kaliber.net'] }) // throws a error
+safeUrl('https://kaliber.net/', { allowedHostsList: ['kaliber.net'] }) // returns the given url.
 ```
 
 ## Disclaimer
