@@ -1,0 +1,27 @@
+{
+  "name": "@kaliber/safe-url",
+  "version": "0.0.1",
+  "main": "index.js",
+  "sideEffects": false,
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watchAll"
+  },
+  "files": [
+    "index.js",
+    "src/**",
+    "LICENSE",
+    "readme.md",
+    "package.json"
+  ],
+  "private": false,
+  "license": "MIT",
+  "repository": "https://github.com/kaliberjs/safe-url.git",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
+}
