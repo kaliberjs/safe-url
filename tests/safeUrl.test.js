@@ -35,4 +35,15 @@ describe('safeUrl', () => {
     const unsafeInput = 'javascript:confirm(document.domain)//'
     expect(() => safeUrl(unsafeInput)).toThrowError()
   })
+
+  describe('allowedHostsList', () => {
+    it('throws a error when a domain is used that is not in the allowList', () => {
+      expect(() => safeUrl('https://kaliber.nl/', { allowedHostsList: ['kaliber.net'] })).toThrowError()
+    })
+
+    it('returns the input url when a safe host is used', () => {
+      const input = 'https://kaliber.net/'
+      expect(safeUrl(input, { allowedHostsList: ['kaliber.net'] })).toEqual(input)
+    })
+  })
 })
